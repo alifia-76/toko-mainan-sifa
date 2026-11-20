@@ -1,0 +1,676 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #fff8fc;
+    color: #4a3548;
+}
+
+header {
+    background: linear-gradient(135deg, #e8b9e8, #f8d9ed);
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 3px 12px rgba(150, 90, 140, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: #783d75;
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+
+.logo p {
+    color: #86547f;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #713c70;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 17px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: white;
+    color: #c05aa7;
+    transform: translateY(-3px);
+}
+
+#beranda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 80px 8%;
+    background: linear-gradient(135deg, #fce4f3, #f4e5ff);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text {
+    flex: 1;
+    position: relative;
+    z-index: 3;
+}
+
+.subjudul {
+    color: #b45ba4;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    color: #784477;
+    margin-bottom: 20px;
+}
+
+.hero-text h2 span {
+    color: #c05aa7;
+}
+
+.hero-text > p:not(.subjudul) {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #8b6685;
+    margin-bottom: 25px;
+}
+
+.tombol {
+    display: inline-block;
+    background: linear-gradient(135deg, #c76bb7, #9d62b1);
+    color: white;
+    text-decoration: none;
+    padding: 13px 27px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 5px 12px rgba(192, 90, 167, 0.15);
+}
+
+.tombol:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(192, 90, 167, 0.3);
+}
+
+.hero-image {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+    z-index: 3;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(150, 90, 140, 0.15);
+}
+
+.hero-decoration {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.float-item {
+    position: absolute;
+    display: block;
+    filter: drop-shadow(0 5px 5px rgba(180, 100, 150, 0.18));
+    animation: toyFloat 4s ease-in-out infinite;
+}
+
+.balloon {
+    top: 5%;
+    left: 2%;
+    font-size: 75px;
+    animation: balloonFloat 5s ease-in-out infinite;
+}
+
+.teddy {
+    bottom: 3%;
+    left: 2%;
+    font-size: 65px;
+    animation-delay: 1s;
+}
+
+.star-big {
+    top: 8%;
+    right: 3%;
+    font-size: 70px;
+    animation: starRotate 6s linear infinite;
+}
+
+.cloud {
+    top: 4%;
+    left: 42%;
+    font-size: 60px;
+    animation-delay: 2s;
+}
+
+.heart {
+    bottom: 8%;
+    right: 5%;
+    font-size: 65px;
+    animation: heartBeat 3s ease-in-out infinite;
+}
+
+.gift {
+    top: 52%;
+    right: 1%;
+    font-size: 55px;
+    animation-delay: 0.5s;
+}
+
+.sparkle {
+    top: 35%;
+    left: 2%;
+    font-size: 48px;
+    color: #e5a1d1;
+    animation: starRotate 5s linear infinite;
+}
+
+.flower {
+    bottom: 4%;
+    right: 38%;
+    font-size: 48px;
+    animation-delay: 2s;
+}
+
+.ball {
+    top: 65%;
+    left: 40%;
+    font-size: 55px;
+    animation: toyFloat 5s ease-in-out infinite;
+}
+
+.star-small {
+    top: 35%;
+    right: 25%;
+    font-size: 40px;
+    animation-delay: 1s;
+}
+
+@keyframes toyFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-25px) rotate(8deg);
+    }
+}
+
+@keyframes balloonFloat {
+    0%, 100% {
+        transform: translateY(10px) rotate(-8deg);
+    }
+    50% {
+        transform: translateY(-35px) rotate(8deg);
+    }
+}
+
+@keyframes starRotate {
+    0%, 100% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(25deg) scale(1.2);
+    }
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+#produk {
+    padding: 75px 7%;
+    text-align: center;
+}
+
+.judul-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.judul-section > p {
+    color: #c05aa7;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.judul-section h2 {
+    color: #874b83;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.judul-section span {
+    color: #987b94;
+    font-size: 14px;
+}
+
+.cute-divider {
+    color: #d58bc4;
+    font-size: 22px;
+    margin: 12px 0;
+    letter-spacing: 4px;
+}
+
+.Produk {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.produk-card {
+    display: block;
+    width: 220px;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(170, 110, 160, 0.12);
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.produk-card::before {
+    content: "✦";
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    color: #e6a5d6;
+    font-size: 27px;
+    z-index: 2;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.produk-card:hover::before {
+    opacity: 1;
+    transform: rotate(30deg);
+}
+
+.produk-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 12px 25px rgba(170, 110, 160, 0.2);
+}
+
+.produk-card input {
+    accent-color: #c05aa7;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.produk-card img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 13px;
+    transition: 0.4s;
+}
+
+.produk-card:hover img {
+    transform: scale(1.05);
+}
+
+.produk-card h3 {
+    color: #874b83;
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.produk-card p {
+    color: #987b94;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 8px 0;
+}
+
+.pilih-text {
+    display: block;
+    text-align: center;
+    background-color: #f8e4f4;
+    color: #a14d95;
+    padding: 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.produk-card:has(input:checked) {
+    border-color: #c05aa7;
+    background-color: #fff0fa;
+    transform: translateY(-5px);
+}
+
+.produk-card:has(input:checked) .pilih-text {
+    background-color: #c05aa7;
+    color: white;
+}
+
+.produk-card:has(input:checked) .pilih-text::after {
+    content: " ✓";
+}
+
+#brand {
+    padding: 70px 7%;
+    background-color: #fff0fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-track {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.brand-card {
+    background: linear-gradient(135deg, #f5d4ef, #eadbfa);
+    color: #784a79;
+    padding: 22px 30px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(170, 110, 160, 0.12);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-card::after {
+    content: "♡";
+    margin-left: 8px;
+    color: #bd72ac;
+}
+
+.brand-card:hover {
+    background-color: #e8b9e8;
+    transform: translateY(-7px) rotate(-2deg);
+}
+
+#tentang {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    padding: 75px 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.tentang-image {
+    flex: 1;
+}
+
+.tentang-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(150, 90, 140, 0.13);
+}
+
+.tentang-text {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.tentang-text h2 {
+    color: #874b83;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.tentang-text p:not(.subjudul) {
+    color: #8b6685;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.about-decoration {
+    color: #cb80b7;
+    font-size: 27px;
+    margin: 15px 0;
+    letter-spacing: 5px;
+    animation: toyFloat 4s ease-in-out infinite;
+}
+
+.tentang-text .tombol {
+    margin-top: 10px;
+}
+
+footer {
+    background: linear-gradient(135deg, #e8b9e8, #f5d5ec);
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: #663e68;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "♡  ✦  ♡  ✧  ♡";
+    display: block;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 15px;
+    animation: toyFloat 4s ease-in-out infinite;
+}
+
+footer h2 {
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+footer > p {
+    font-size: 14px;
+}
+
+.footer-info {
+    margin: 25px 0;
+    line-height: 2;
+}
+
+.footer-info p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.copyright {
+    border-top: 1px solid rgba(120, 61, 117, 0.2);
+    padding-top: 18px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 22px 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    #beranda {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .balloon {
+        top: 1%;
+        left: 1%;
+        font-size: 42px;
+    }
+
+    .teddy {
+        bottom: 1%;
+        left: 1%;
+        font-size: 38px;
+    }
+
+    .star-big {
+        top: 2%;
+        right: 2%;
+        font-size: 43px;
+    }
+
+    .cloud {
+        top: 1%;
+        left: 42%;
+        font-size: 35px;
+    }
+
+    .heart {
+        bottom: 5%;
+        right: 2%;
+        font-size: 40px;
+    }
+
+    .gift {
+        top: 50%;
+        right: 1%;
+        font-size: 32px;
+    }
+
+    .sparkle {
+        font-size: 30px;
+    }
+
+    .flower,
+    .ball {
+        font-size: 32px;
+    }
+
+    .star-small {
+        font-size: 25px;
+    }
+
+    #produk {
+        padding: 55px 15px;
+    }
+
+    .produk-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .brand-track {
+        gap: 12px;
+    }
+
+    .brand-card {
+        width: 80%;
+        text-align: center;
+    }
+
+    #tentang {
+        flex-direction: column;
+        padding: 55px 20px;
+        text-align: center;
+    }
+
+    .tentang-image img {
+        height: 240px;
+    }
+
+    .tentang-text h2 {
+        font-size: 24px;
+    }
+
+    .about-decoration {
+        font-size: 21px;
+    }
+
+    .cute-divider {
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
